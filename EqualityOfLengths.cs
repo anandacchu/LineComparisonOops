@@ -6,22 +6,20 @@ using System.Threading.Tasks;
 
 namespace LineComparisonOops
 {
-    public class EqualityOfLengths
+    public class EqualLength
     {
-        public void CheckEqualityOfLength(int a1, int b1, int a2, int b2)
+        public void LengthOfLine(double x1, double y1, double x2, double y2, double a1, double b1, double a2, double b2)
         {
-            int len1, len2;
-            if (a1 == a2)
-            {
-                Console.WriteLine(b1.Equals(b2));
-            }
-            else
-            {
-                len1 = b1 - a1;
-                len2 = b2 - a2;
-                Console.WriteLine(len1.Equals(len2));
+            double lengthOfLine;
+            double lengthOfLine1;
 
-            }
+            lengthOfLine = Math.Sqrt(Math.Pow((x2 - x1), 2) + Math.Pow((y2 - y1), 2));
+            Console.WriteLine("Length of a given Line is: " + lengthOfLine);
+
+            lengthOfLine1 = Math.Sqrt(Math.Pow((a2 - a1), 2) + Math.Pow((b2 - b1), 2));
+            Console.WriteLine("Length of a given Line is: " + lengthOfLine1);
+
+            Console.WriteLine(lengthOfLine.Equals(lengthOfLine1));
         }
     }
 }
